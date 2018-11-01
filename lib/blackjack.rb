@@ -53,11 +53,11 @@ end
 
 def runner
   welcome
-  initial_round
-  until initial_round > 21 do
-    initial_round = hit?(initial_round)
-    puts "Your cards add up to #{initial_round}"
+  total = initial_round
+  until total > 21 do
+    total = hit?(total)
+    puts "Your cards add up to #{total}"
   end
-  end_game(initial_round)
+  end_game(total)
 end
 
